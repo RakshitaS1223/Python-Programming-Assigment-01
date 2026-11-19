@@ -1,0 +1,51 @@
+student_marks = [78, 35, 92, 40, 61]
+
+# Converting list into tuple
+student_marks_tuple = tuple(student_marks)
+
+# Displaying list and tuple
+print("Student Marks List:", student_marks)
+print("Data Type:", type(student_marks))
+
+print("Student Marks Tuple:", student_marks_tuple)
+print("Data Type:", type(student_marks_tuple))
+
+# Finding highest and lowest marks
+print("Highest Marks:", max(student_marks))
+print("Lowest Marks:", min(student_marks))
+
+# Counting students who scored at least 40
+count = sum([
+    student_marks[0] >= 40,
+    student_marks[1] >= 40,
+    student_marks[2] >= 40,
+    student_marks[3] >= 40,
+    student_marks[4] >= 40
+])
+
+print("Students Scoring at Least 40:", count)
+
+# Checking whether all marks are within 0 to 100
+valid_marks = all([
+    0 <= student_marks[0] <= 100,
+    0 <= student_marks[1] <= 100,
+    0 <= student_marks[2] <= 100,
+    0 <= student_marks[3] <= 100,
+    0 <= student_marks[4] <= 100
+])
+
+print("All Marks Within Valid Range:", valid_marks)
+
+# Changing an element in the list
+student_marks[0] = 85
+print("Modified List:", student_marks)
+
+# Trying to change an element in the tuple
+try:
+    student_marks_tuple[0] = 85
+except TypeError:
+    print("Tuple cannot be modified.")
+
+# Observation:
+# List is mutable, so its elements can be changed.
+# Tuple is immutable, so its elements cannot be changed.
